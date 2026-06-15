@@ -1,0 +1,20 @@
+<script>
+    let quantidade = Number(prompt("Insira a quantidade"));
+    while (quantidade !== null){
+        if(quantidade !== "" && isFinite(quantidade)){
+        if (quantidade < 0){
+            alert ("Valor inválido")
+        }else if (quantidade == 0){
+            alert ("Produto esgostado")
+        }else if (quantidade <= 5){
+            alert ("Estoque crítico")
+        }else if (quantidade <= 20){
+            alert ("Estoque baixo")
+        }else{
+            alert ("Estoque adequado")
+        }}else {
+            alert("Erro!")
+        }
+    quantidade = Number(prompt("Insira a quantidade"));
+    }
+</script>

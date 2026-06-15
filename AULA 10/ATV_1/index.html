@@ -1,0 +1,21 @@
+<script>
+    let idade = Number(prompt("Digite sua idade"));
+    while (idade !== 0) {
+        if (isFinite(idade) && idade !== "" && idade >= 0) {
+            if (idade < 12) {
+                alert("Criança");
+            } else if (idade < 18) {
+                alert("Adolescente");
+            } else if (idade < 60) {
+                alert("Adulto");
+            } else {
+                alert("Idoso");
+            }
+        } else {
+            alert("Dados não informados")
+        }
+        idade = Number(prompt("Digite sua idade novamente"));
+    }
+
+
+</script>

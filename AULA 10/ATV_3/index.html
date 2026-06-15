@@ -1,0 +1,17 @@
+<script>
+    let perfil = prompt("Digite o perfil: admin, professor, aluno ou visitante");
+    while (perfil !== null){
+        if (perfil == "admin"){
+            alert ("Acesso autorizado: Total")
+        }else if (perfil == "professor"){
+            alert ("Acesso autorizado: Aulas e atividades")
+        }else if (perfil == "aluno"){ 
+            alert("Acesso autorizado: Conteúdo do curso")
+        }else if (perfil == "visitante"){
+            alert("Acesso limitado")
+        }else {
+            alert ("Acesso inválido")
+        }
+    perfil = prompt("Digite o perfil: admin, professor, aluno ou visitante");
+    }
+</script>
