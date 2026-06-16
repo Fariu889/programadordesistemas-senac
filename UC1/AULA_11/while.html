@@ -1,0 +1,32 @@
+<script>
+    let teste = prompt("Digite alguma coisa");
+
+    let contador = 0;
+    while(teste !== null){
+
+        contador++; 
+
+        if (contador < 6){
+            alert(`
+            Dado registrado : ====== 
+            Valor digitado : ${teste}  
+            Contagem de uso : ${contador}`)
+            //utilizar a crase (``) permite o uso da função ${}
+        }else {
+            teste = null 
+            alert (`
+            Dado registrando : ====== 
+            Valor digitado : ${teste}  
+            Contagem de uso : ${contador}
+            AÇÃO SERÁ CANCELADA.`)
+            break
+            //break irá quebrar o ciclo do while
+        }
+
+
+    teste = prompt("Digite alguma coisa")
+    // sempre repetir a condição do prompt no final do while{}
+    }
+
+    alert("Condição Finalizada");
+</script>
