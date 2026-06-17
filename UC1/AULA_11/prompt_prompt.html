@@ -1,0 +1,33 @@
+<script>
+    let lista = [
+        "Gabriel",
+        "Lucas",
+        "Rodrigo",
+        "Maria"
+    ]
+    let option = Number(prompt("Selecione um cliente(digite o código)"))
+
+    while (option !== 0) {
+        let num = option - 1
+        let tamanho = lista.length
+        if (!isFinite(option)) {
+            //O isFinite deve ser escrito dessa maneira e o ! antes do comando
+            alert(`DADO INDEFINIDO: Insira de 1 a 4`)
+        } else if (num < 0 || option > tamanho) {
+            alert(`DADO INDEFINIDO: Insira de 1 a 4`)
+        } else {
+            alert(`
+DADOS DO USUÁRIO
+==================
+VOCÊ SELECIONOU:
+NOME ${lista[num]}
+DADO DO NOME ${tamanho}
+`)
+        }
+
+        option = Number(prompt("Selecione um cliente( digite o código)"))
+    }
+
+    alert ("Sistema Cancelado")
+    //A lista é uma array, onde o primeiro nome começar de 0 a adiante.
+</script>
