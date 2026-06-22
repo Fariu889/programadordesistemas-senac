@@ -1,0 +1,54 @@
+<script>
+    let lista = ["Gabriel", "Rodrigo", "Rafael", "Douglas"]
+    let inicio = Number(prompt(`Bem-vindo a lista de funcionário:\n${lista.join("\n")}\n 
+    Digite 1 para Adicionar o funcionário;
+    Digite 2 para Excluir o funcionário da lista;
+    Digite 0 para Sair.`))
+    while(inicio !== 0){
+        
+        if (inicio === 1){
+            let novo = prompt(`Digite o nome do funcionário:`)
+            while(novo !== "" && novo !== null){
+                lista.push(novo)
+            alert ("Funcionários cadastros: \n\n" + lista.join("\n"));
+
+            novo = prompt(`Digite o nome do funcionário:`)  
+            
+           
+        }}else if(inicio ===2){
+         let cancelar = prompt(`Digite o nome do funcionário:\n\n${lista.join("\n")} 
+         \n\nDigite o nome que deseja remover:`);
+         // O \n\n mostra em linhas separado abaixo
+         // O ${lista.join("\n")} mostra a lista um abaixo do outro
+        while(cancelar !== "" && cancelar !== null){
+
+            let indice = lista.indexOf(cancelar)
+            //o indexOf(cancelar) irá  retorna na array, onde dará o valor 1
+
+            if(indice !== -1){
+                lista.splice(indice, 1)
+                //splice irá excluir o nome que irá digitar na aba
+                alert ("Funcionários cadastros: \n\n" + lista.join("\n"));
+            }else{
+                alert("Funcionário não encontrado")
+            }
+
+        cancelar = prompt(`Digite o nome do funcionário:\n\n${lista.join("\n")} \n\nDigite o nome que deseja remover:`);  
+        }  
+           
+        }else{
+            
+            alert("Não é válido")
+
+
+            }
+        
+
+    
+inicio = Number(prompt(`Bem-vindo a lista de funcionário:\n${lista.join("\n")}\n 
+    Digite 1 para Adicionar o funcionário;
+    Digite 2 para Excluir o funcionário da lista;
+    Digite 0 para Sair.`))
+    }
+    
+</script>
