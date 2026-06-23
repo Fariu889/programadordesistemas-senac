@@ -1,0 +1,34 @@
+<script>
+    let nota1 = Number(prompt("Insira a primeira nota:"))
+    let nota2 = Number(prompt("Insira a segunda nota:"))
+    let nota3 = Number(prompt("Insira a terceira nota:"))
+
+function mediafinal(a, b, c){
+
+    let media = (a + b + c)/ 3
+
+    if (media == "" || media > 10 || media < 0){
+        alert("Dado inválido")
+    }else if (media < 5){
+        alert(`A média das notas: ${a} ; ${b} ; ${c};
+    Resultando: ${media} - Reprovado`)
+
+    }else if(media < 7 && media >= 5){
+         alert(`A média das notas: ${a} ; ${b} ; ${c};
+    Resultando: ${media} - Recuperação`)
+
+    }else (media > 7 && media <=10);{
+        alert(`A média das notas: ${a} ; ${b} ; ${c};
+    Resultando: ${media}
+    Aprovado
+        `)
+    }
+}
+while(!isFinite.nota1 && !isFinite.nota2 && !isFinite.nota3){
+    mediafinal(nota1, nota2, nota3)
+   
+    nota1 = Number(prompt("Insira a primeira nota:"))
+    nota2 = Number(prompt("Insira a segunda nota:"))
+    nota3 = Number(prompt("Insira a terceira nota:"))
+}
+</script>

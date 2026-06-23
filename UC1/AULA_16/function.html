@@ -1,0 +1,23 @@
+<script>
+    let empregados = ["Rodrigo", "Leandro", "Roberta", "Andressa"]
+
+    let nacionalidade = ["Brasileiro", "Venezuelano", "Japonês", "Chinês", "Angolano"]
+
+    let demonstra = "Cadastro de .....\n"
+    nacionalidade.forEach(function(dados,i){
+        // o i da a posição da informação
+        demonstra += `${i + 1} - ${dados}\n`
+    })
+function teste(){
+    alert(empregados.join("\n") + "\n" + nacionalidade.join("\n"))
+}
+teste(); soma()
+
+
+function soma(){
+    let v1 = 100;
+    let v2 = 300;
+    let total = v1 + v2
+alert(`A soma de ${v1} + ${v2} é de ${total}`)
+}
+</script>

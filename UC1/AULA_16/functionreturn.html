@@ -1,0 +1,21 @@
+ <script>
+     let amigos = ["Rodrigo", "Leandro", "Roberta", "Andressa"]
+     
+     let local = ["Brasileiro", "Venezuelano", "Japonês", "Chinês", "Angolano"]
+
+     function exibirlista(lista_1, lista_2){
+     
+        let exibir = "A nacionalidade dos meus amigos:\n"
+         lista_1.forEach(function(dados,i){
+         // o i da a posição da informação
+         exibir += `${i + 1} - ${dados}\n`
+        });
+
+        lista_2.forEach(function(dados,i){
+         // o i da a posição da informação
+         exibir += `${i + 1} - ${dados}\n`
+        })
+         return exibir;
+    }
+        alert(exibirlista(amigos, local))
+ </script> 
