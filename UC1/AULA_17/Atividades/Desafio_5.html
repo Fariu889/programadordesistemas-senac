@@ -1,0 +1,30 @@
+<script>
+    let custo = Number(prompt("Insira o valor do custo:"))
+    let percentual = Number(prompt("Insira o valor do percentual: "))
+
+    function calcular_Preco_venda(x,y){
+
+        if (x > 0 || y > 0){
+            lucro = (x * y) / 100
+            let preco = custo + lucro
+            let mensagem =  (`
+            O valor de custo é: R$ ${x.toFixed(2)} 
+            O valor do percentual é: ${y}%
+            O lucro deste produto é de: R$ ${lucro.toFixed(2)}
+            Resultando o preço de: R$ ${preco.toFixed(2)}
+                `)   
+            alert(mensagem)
+        } else {
+            alert("Dado inválido")
+        }
+    }
+
+    while(!isFinite.custo && !isFinite.percentual){
+        calcular_Preco_venda(custo, percentual)
+
+        custo = Number(prompt("Insira o valor do custo:"))
+        percentual = Number(prompt("Insira o valor do percentual: "))
+
+
+    }
+</script>

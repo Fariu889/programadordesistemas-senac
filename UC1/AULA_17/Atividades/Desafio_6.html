@@ -1,0 +1,30 @@
+<script>
+    let compra = Number(prompt("Insira o valor da compra:"))
+    let percentual = Number(prompt("Insira o valor do percentual de desconto: "))
+
+    function calcular_Desconto(x, y) {
+
+        if (x > 0 || y > 0) {
+            valor_Desconto = (x * y) / 100
+            let preco_Final = compra - valor_Desconto
+            let mensagem = (`
+            O valor da compra é: R$ ${x.toFixed(2)} 
+            O valor do percentual de desconto é: ${y}%
+            O desconto deste produto é de: R$ ${valor_Desconto.toFixed(2)}
+            Resultando o preço de: R$ ${preco_Final.toFixed(2)}
+                `)
+            alert(mensagem)
+        } else {
+            alert("Dado inválido")
+        }
+    }
+
+    while (!isFinite.compra && !isFinite.percentual) {
+        calcular_Desconto(compra, percentual)
+
+        compra = Number(prompt("Insira o valor da compra:"))
+        percentual = Number(prompt("Insira o valor do percentual de desconto: "))
+
+
+    }
+</script>

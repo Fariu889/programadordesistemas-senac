@@ -1,0 +1,38 @@
+<script>
+function calcular_Comissao(nome, valor, percentual) {
+    let comissao = (valor * percentual) / 100;
+
+    alert(`
+Vendedor responsável: ${nome}
+O valor da compra é: R$ ${valor.toFixed(2)}
+A comissão do vendedor é de: ${percentual}%
+A comissão do vendedor ${nome} é de: R$ ${comissao.toFixed(2)}
+`);
+}
+
+while (true) {
+    let nome = prompt("Insira o nome do vendedor:");
+
+    // Valida o nome
+    if (!isNaN(nome) || nome === "") {
+        alert("Nome inválido!");
+        continue; // volta para o início do while
+    }
+
+    let valor_Vendido = Number(prompt("Insira o valor vendido:"));
+
+    if (!isFinite(valor_Vendido) || valor_Vendido <= 0) {
+        alert("Valor vendido inválido!");
+        continue;
+    }
+
+    let percentual = Number(prompt(`Insira o percentual de ${nome}:`));
+
+    if (!isFinite(percentual) || percentual <= 0) {
+        alert("Percentual inválido!");
+        continue;
+    }
+
+    calcular_Comissao(nome, valor_Vendido, percentual);
+}
+</script>

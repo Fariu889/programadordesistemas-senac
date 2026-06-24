@@ -1,0 +1,21 @@
+<script>
+    let teste = prompt(" Digite o nome do produto:")
+    function campoVazio (x){
+        let mensagem = ""
+        let status = true
+        if (x == null){
+
+            mensagem = `Campo está nulo e status: ${status}`
+        } else if( x == ""){
+
+            mensagem = `Campo está vazio e status: ${status}`
+        }else{
+            status = false
+            mensagem = `Campo preenchido com ${x} e status: ${status}`
+        }
+        return mensagem
+
+    }
+
+    alert(campoVazio(teste))
+</script>
