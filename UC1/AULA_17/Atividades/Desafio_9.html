@@ -1,18 +1,29 @@
 <script>
-    function classificar_Idade(idade, status){
-    alert(`A idade inserida é ${idade} significando que é ${status}`)
+    function classificar_Idade(idade, retorno){
+        alert(`A idade inserida é ${idade} --- ${retorno}`)
     }
-
+    let retorno = ""
     while(true){
+        
+        let idade = prompt("Insira a sua idade: ");
+        
+        if (idade === "" || idade < 0 || idade == null || isNaN(idade) || idade > 110){
+            alert("Dado inválido");
+            continue;
+        }
+            
+            let status = ["Criança", "Adolescente", "Adulto", "Idoso"]
+        if(idade <= 12){
+            retorno = `Você é ${status[0]}`
+        }else if(idade <= 18){
+            retorno = `Você é ${status[1]}`
 
-        let idade = prompt("Insira a sua idade: ")
-        if (!Number(idade) && idade === "" && idade < 0){
-        alert("Dado inválido")}
-
-        let status = ["Criança", "Adolescente", "Adulto", "Idoso"]
-        if(idade < 12){
-            alert (`Você é ${status[0]}`)
+        }else if(idade <= 60){
+            retorno = `Você é ${status[2]}`
+        }else{
+            retorno = `Você é ${status[3]}`
         }
 
+        classificar_Idade(idade, retorno)
     }
 </script>

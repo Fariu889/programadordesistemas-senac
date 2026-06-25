@@ -1,0 +1,45 @@
+<script>
+    let estoque = ["Lápis", "Tesoura", "Garrafa", "Borracha"]
+    function exibirMenu(menu){
+        alert ("Retornando ao menu")
+    }
+    while(true){
+        let menu = Number(prompt("Bem vindo ao Sistema da livraria Seu Sérgio:\n1 - Cadastrar produto \n2 - Listar produto \n0 - Sair"))
+        if (isNaN(menu) || menu >= 3 || menu < 0){
+            alert("Dado inválido");
+        continue;
+    }else if (menu == 1){
+        function cadastrarProduto(produto){}
+        
+        produto = prompt("Insira o produto novo:")
+        while(true){
+            if (Number(produto) || produto == "" || produto == null){
+                alert("Informação inválida");
+            } else{
+                estoque.push(produto)
+                alert(`${produto} inserido com sucesso`)
+                break;
+            }
+            cadastrarProduto(produto);
+            
+        }
+    }else if(menu == 2){
+        function listarPodruto(lista){
+        }
+        lista = estoque.join("\n")
+        while(true){
+            alert(lista);
+            break;
+            listarPodruto(lista)
+        }
+    }else {
+        alert("Programa finalizado");
+        break;
+    }
+    exibirMenu(menu)
+}
+    
+    // let z = function encerrarSistema(fechar){
+    //     alert (`Progrma encerrado`)
+    // }
+</script>
